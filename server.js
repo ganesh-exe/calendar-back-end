@@ -18,5 +18,5 @@ mongoose.connection.on('connected',()=>{
   app.use(cors())
   app.use('/', routesurls)
 
-  let port=2602
+  let port=process.env.PORT || 2626;
   app.listen(port, ()=> console.log(`server up and is running on port ${port}`))
